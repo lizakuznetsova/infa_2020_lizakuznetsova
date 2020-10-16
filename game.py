@@ -56,9 +56,9 @@ while not finished:
         if event.type == pygame.QUIT:
             finished = True
         elif event.type == pygame.MOUSEBUTTONDOWN:
-            x1, y1 = pygame.mouse.get_pos()  # gettin mouseclick coordinates
+            x1, y1 = pygame.mouse.get_pos()  # координаты щелчка мыши
             for i in balllist:
-                # checking if ball got caught
+                # проверка, не попался ли мяч
                 if (i.x - x1) ** 2 + (i.y - y1) ** 2 <= i.r ** 2:
                     balllist.remove(i)
                     click += 1
